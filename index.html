@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه عطر و ادکلن لاکچری | صفحه اصلی</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <!-- Main Navigation -->
+            <div class="py-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <button class="lg:hidden text-gray-800 ml-4 focus:outline-none" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <h5 class="font-bold text-lg">پرفیوم شاپ</h5>
+                        <!-- <img src="https://via.placeholder.com/150x50/FFFFFF/333333?text=LUXPERFUME" alt="لوگو فروشگاه" class="h-10"> -->
+                    </a>
+                </div>
+                
+                <nav class="hidden lg:flex items-center space-x-8 space-x-reverse text-sm">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home ml-1 text-gold"></i>
+                        <span>صفحه اصلی</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-store ml-1"></i>
+                        <span>فروشگاه</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-crown ml-1"></i>
+                        <span>برندها</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percentage ml-1"></i>
+                        <span>تخفیف‌ها</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-newspaper ml-1"></i>
+                        <span>وبلاگ</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-info-circle ml-1"></i>
+                        <span>درباره ما</span>
+                    </a>
+                </nav>
+                
+                <div class="flex items-center space-x-5 space-x-reverse">
+                    <button class="header-icon" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="icon-badge"></span>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="icon-badge"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="lg:hidden bg-white shadow-lg absolute w-full left-0 right-0 z-20 hidden" id="mobileMenu">
+            <nav class="container mx-auto px-4 py-3">
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" class="flex items-center py-2 border-b border-gray-100 text-gold">
+                            <i class="fas fa-home ml-3"></i>
+                            <span>صفحه اصلی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-2 border-b border-gray-100 text-gray-700 hover:text-gold">
+                            <i class="fas fa-store ml-3"></i>
+                            <span>فروشگاه</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-2 border-b border-gray-100 text-gray-700 hover:text-gold">
+                            <i class="fas fa-crown ml-3"></i>
+                            <span>برندها</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-2 border-b border-gray-100 text-gray-700 hover:text-gold">
+                            <i class="fas fa-percentage ml-3"></i>
+                            <span>تخفیف‌ها</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-2 border-b border-gray-100 text-gray-700 hover:text-gold">
+                            <i class="fas fa-newspaper ml-3"></i>
+                            <span>وبلاگ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center py-2 text-gray-700 hover:text-gold">
+                            <i class="fas fa-info-circle ml-3"></i>
+                            <span>درباره ما</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Search Overlay (Hidden by default) -->
+        <div class="search-overlay hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" id="searchOverlay">
+            <div class="bg-white p-6 rounded-lg w-full max-w-2xl mx-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold">جستجو</h3>
+                    <button class="text-gray-500 hover:text-gold" id="closeSearchBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form class="relative">
+                    <input type="text" placeholder="نام محصول یا برند مورد نظر را وارد کنید..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold">
+                    <button type="submit" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gold">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="mt-4">
+                    <p class="text-sm text-gray-500 mb-2">جستجوهای محبوب:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="text-xs bg-gray-100 hover:bg-gold hover:text-white px-3 py-1 rounded-full transition-colors">شنل</a>
+                        <a href="#" class="text-xs bg-gray-100 hover:bg-gold hover:text-white px-3 py-1 rounded-full transition-colors">دیور</a>
+                        <a href="#" class="text-xs bg-gray-100 hover:bg-gold hover:text-white px-3 py-1 rounded-full transition-colors">ورساچه</a>
+                        <a href="#" class="text-xs bg-gray-100 hover:bg-gold hover:text-white px-3 py-1 rounded-full transition-colors">عطر زنانه</a>
+                        <a href="#" class="text-xs bg-gray-100 hover:bg-gold hover:text-white px-3 py-1 rounded-full transition-colors">عطر مردانه</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="swiper-container hero-slider h-screen max-h-[700px]">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative bg-black">
+                    <div class="absolute inset-0 z-0">
+                        <img src="asset/img/img-slider10.jpg" alt="عطر لاکچری" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                        <div class="w-full md:w-1/2 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                <span class="block">کالکشن</span>
+                                <span class="block text-gold">پاییز ۱۴۰۲</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 opacity-90">
+                                مجموعه‌ای از برترین عطرهای فصل پاییز با رایحه‌های گرم و دلنشین
+                            </p>
+                            <a href="#" class="btn-gold px-8 py-3 rounded-md inline-block">
+                                مشاهده کالکشن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative bg-black">
+                    <div class="absolute inset-0 z-0">
+                        <img src="asset/img/img-slider7.jpg" alt="عطر لاکچری" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                        <div class="w-full md:w-1/2 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                <span class="block">برندهای</span>
+                                <span class="block text-gold">لاکچری</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 opacity-90">
+                                مجموعه کامل عطرهای برندهای معتبر جهانی با تضمین اصالت
+                            </p>
+                            <a href="#" class="btn-gold px-8 py-3 rounded-md inline-block">
+                                مشاهده برندها
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide relative bg-black">
+                    <div class="absolute inset-0 z-0">
+                        <img src="asset/img/img-slider8.jpg" alt="عطر لاکچری" class="w-full h-full object-cover opacity-70">
+                    </div>
+                    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                        <div class="w-full md:w-1/2 text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                                <span class="block">تخفیف‌های</span>
+                                <span class="block text-gold">ویژه</span>
+                            </h1>
+                            <p class="text-lg md:text-xl mb-8 opacity-90">
+                                تا ۳۰٪ تخفیف روی محصولات منتخب فقط تا پایان مهرماه
+                            </p>
+                            <a href="#" class="btn-gold px-8 py-3 rounded-md inline-block">
+                                مشاهده تخفیف‌ها
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <div class="swiper-button-next after:content-[''] w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-chevron-left text-white"></i>
+            </div>
+            <div class="swiper-button-prev after:content-[''] w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                <i class="fas fa-chevron-right text-white"></i>
+            </div>
+            
+            <!-- Slider Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">دسته‌بندی محصولات</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">محصولات خود را بر اساس دسته‌بندی‌های زیر جستجو کنید</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Category 1 -->
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="asset/img/img-cat3.jpg" alt="عطر زنانه">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">عطر زنانه</h3>
+                        <span class="category-count">۱۲۵ محصول</span>
+                    </div>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="asset/img/img-cat5.jpg" alt="عطر مردانه">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">عطر مردانه</h3>
+                        <span class="category-count">۱۴۲ محصول</span>
+                    </div>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="asset/img/img-cat4.jpg" alt="ست هدیه">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">ست هدیه</h3>
+                        <span class="category-count">۵۶ محصول</span>
+                    </div>
+                </a>
+                
+                <!-- Category 4 -->
+                <a href="#" class="category-card">
+                    <div class="category-image">
+                        <img src="asset/img/img-cat6.jpg" alt="لوازم جانبی">
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">لوازم جانبی</h3>
+                        <span class="category-count">۳۸ محصول</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">محصولات پرفروش</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">پرفروش‌ترین محصولات ما که مورد پسند مشتریان قرار گرفته‌اند</p>
+            </div>
+            
+            <div class="product-tabs mb-8">
+                <ul class="flex flex-wrap justify-center space-x-2 space-x-reverse">
+                    <li>
+                        <button class="product-tab active" data-tab="all">همه</button>
+                    </li>
+                    <li>
+                        <button class="product-tab" data-tab="women">زنانه</button>
+                    </li>
+                    <li>
+                        <button class="product-tab" data-tab="men">مردانه</button>
+                    </li>
+                    <li>
+                        <button class="product-tab" data-tab="unisex">یونیسکس</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <span class="product-badge bg-gold">جدید</span>
+                        <img src="asset/img/libre.jpg" alt="عطر لیبر">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">ایو سن لورن</div>
+                        <h3 class="product-title">
+                            <a href="#">لیبر اینتنس پرفیوم</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۴۸)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">۴,۸۵۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <span class="product-badge bg-red-500">تخفیف</span>
+                        <img src="asset/img/sauvag.jpg" alt="عطر دیور">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">دیور</div>
+                        <h3 class="product-title">
+                            <a href="#">دیور ساواج ادو پرفیوم</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۶۵)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">۵,۲۰۰,۰۰۰ تومان</span>
+                            <span class="price">۴,۶۸۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="asset/img/lancom1.jpg" alt="عطر لانکوم">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">لانکوم</div>
+                        <h3 class="product-title">
+                            <a href="#">لانکوم لا ویه اِست بل</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۳۷)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">۴,۳۲۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="unisex">
+                    <div class="product-image">
+                        <img src="asset/img/tomford.jpg" alt="عطر تام فورد">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">تام فورد</div>
+                        <h3 class="product-title">
+                            <a href="#">تام فورد بلک ارکید</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۵۲)</span>
+			                        </div>
+                        <div class="product-price">
+                            <span class="price">۵,۷۵۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="asset/img/versace.jpg" alt="عطر ورساچه">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">ورساچه</div>
+                        <h3 class="product-title">
+                            <a href="#">ورساچه اروس</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۴۱)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">۳,۹۸۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <span class="product-badge bg-red-500">تخفیف</span>
+                        <img src="asset/img/XERJOFF.webp" alt="عطر زرجف">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">زرجف</div>
+                        <h3 class="product-title">
+                            <a href="#"> زرژاف کازاموراتی </a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(۲۹)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">۳,۸۰۰,۰۰۰ تومان</span>
+                            <span class="price">۳,۴۲۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-category="unisex">
+                    <div class="product-image">
+                        <img src="asset/img/giorgio-armani.jpg" alt="عطر جورجیو آرمانی">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">جورجیو آرمانی</div>
+                        <h3 class="product-title">
+                            <a href="#">جورجیو آرمانی</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(۴۷)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">۶,۱۲۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <span class="product-badge bg-gold">جدید</span>
+                        <img src="asset/img/aventus.jpg" alt="عطر کرید">
+                        <div class="product-actions">
+                            <button class="product-action-btn" title="افزودن به سبد خرید">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="product-action-btn" title="افزودن به علاقه‌مندی‌ها">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="product-action-btn" title="مشاهده سریع">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">کرید</div>
+                        <h3 class="product-title">
+                            <a href="#">کرید اونتوس</a>
+                        </h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(۵۹)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">۷,۲۵۰,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="btn-outline-gold px-8 py-3 rounded-md inline-block">
+                    مشاهده همه محصولات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Banner 1 -->
+                <div class="banner-card">
+                    <div class="banner-image">
+                        <img src="asset/img/img-slider7.jpg" alt="عطرهای زنانه">
+                    </div>
+                    <div class="banner-content">
+                        <h3 class="banner-subtitle">مجموعه جدید</h3>
+                        <h2 class="banner-title">عطرهای زنانه</h2>
+                        <p class="banner-desc">رایحه‌های شیرین و گلدار برای بانوان خاص‌پسند</p>
+                        <a href="#" class="banner-btn">
+                            <span>خرید کنید</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Banner 2 -->
+                <div class="banner-card">
+                    <div class="banner-image">
+                        <img src="asset/img/img-slider2.jpg" alt="عطرهای مردانه">
+                    </div>
+                    <div class="banner-content">
+                        <h3 class="banner-subtitle">پیشنهاد ویژه</h3>
+                        <h2 class="banner-title">عطرهای مردانه</h2>
+                        <p class="banner-desc">رایحه‌های چوبی و ادویه‌ای برای آقایان شیک‌پوش</p>
+                        <a href="#" class="banner-btn">
+                            <span>خرید کنید</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">برندهای معتبر</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">ما با معتبرترین برندهای جهانی همکاری می‌کنیم</p>
+            </div>
+            
+            <div class="swiper-container brands-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/Chanel.png" alt="شنل">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/dior.png" alt="دیور">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/versacelogo.jpg" alt="ورساچه">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/gucci.jpg" alt="گوچی">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/tomfordlogo.png" alt="تام فورد">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-card">
+                            <img src="asset/img/creed-1.webp" alt="کرید">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-3 md:grid-cols-1 gap-6">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="feature-title">ارسال سریع و رایگان</h3>
+                    <p class="feature-desc">برای سفارش‌های بالای ۵۰۰ هزار تومان، ارسال رایگان خواهد بود</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">تضمین اصالت کالا</h3>
+                    <p class="feature-desc">تمامی محصولات با گارانتی اصالت و کیفیت عرضه می‌شوند</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3 class="feature-title">۷ روز ضمانت بازگشت</h3>
+                    <p class="feature-desc">در صورت عدم رضایت، امکان بازگشت کالا تا ۷ روز پس از خرید</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">نظرات مشتریان</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">آنچه مشتریان ما درباره محصولات و خدمات ما می‌گویند</p>
+            </div>
+            
+            <div class="swiper-container testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                من عاشق عطرهای این فروشگاه هستم. کیفیت محصولات عالی است و
+				                                من عاشق عطرهای این فروشگاه هستم. کیفیت محصولات عالی است و
+                                ماندگاری بسیار خوبی دارند. بسته‌بندی شیک و ارسال سریع از نقاط قوت این فروشگاه است.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="مریم حسینی">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">مریم حسینی</h4>
+                                    <span class="testimonial-position">مشتری دائمی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                اصالت محصولات این فروشگاه قابل تحسین است. من چندین بار از اینجا خرید کرده‌ام و همیشه از کیفیت محصولات راضی بوده‌ام. پشتیبانی عالی و پاسخگویی سریع دارند.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="علی محمدی">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">علی محمدی</h4>
+                                    <span class="testimonial-position">مشتری</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                تنوع محصولات این فروشگاه فوق‌العاده است. هر برندی که بخواهید اینجا پیدا می‌کنید. قیمت‌ها منصفانه است و کیفیت محصولات عالی. حتماً به دوستانم معرفی می‌کنم.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="سارا رضایی">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">سارا رضایی</h4>
+                                    <span class="testimonial-position">مشتری</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                بسته‌بندی محصولات بسیار شیک و لوکس است. عطری که خریدم دقیقاً همان چیزی بود که انتظار داشتم. ارسال سریع و پشتیبانی خوب از ویژگی‌های این فروشگاه است.
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="امیر کریمی">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">امیر کریمی</h4>
+                                    <span class="testimonial-position">مشتری</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">آخرین مقالات</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">با مطالعه مقالات ما با دنیای عطر و رایحه بیشتر آشنا شوید</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-1 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="asset/img/img-slider2.jpg" alt="راهنمای انتخاب عطر">
+                        <div class="blog-date">
+                            <span class="blog-day">۱۵</span>
+                            <span class="blog-month">مهر</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> توسط ادمین</span>
+                            <span><i class="far fa-comments"></i> ۱۲ نظر</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">راهنمای کامل انتخاب عطر مناسب با شخصیت شما</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            در این مقاله به شما کمک می‌کنیم تا عطری متناسب با شخصیت و سبک زندگی خود انتخاب کنید...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            <span>ادامه مطلب</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="asset/img/img-slider5.jpg" alt="نگهداری از عطر">
+                        <div class="blog-date">
+                            <span class="blog-day">۸</span>
+                            <span class="blog-month">مهر</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> توسط ادمین</span>
+                            <span><i class="far fa-comments"></i> ۸ نظر</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">نکات مهم برای نگهداری صحیح از عطر و افزایش ماندگاری آن</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            آیا می‌دانید نحوه نگهداری عطر تأثیر مستقیمی بر کیفیت و ماندگاری آن دارد؟ در این مقاله...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            <span>ادامه مطلب</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="asset/img/img-slider4.jpg" alt="ترندهای عطر">
+                        <div class="blog-date">
+                            <span class="blog-day">۲۵</span>
+                            <span class="blog-month">شهریور</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> توسط ادمین</span>
+                            <span><i class="far fa-comments"></i> ۵ نظر</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">ترندهای عطر و ادکلن در سال ۱۴۰۲: چه رایحه‌هایی محبوب‌تر هستند؟</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            در این مقاله به بررسی محبوب‌ترین رایحه‌ها و ترندهای عطر در سال جاری می‌پردازیم...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            <span>ادامه مطلب</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Blog Post 4 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="asset/img/img-cat1.jpg" alt="ترندهای عطر">
+                        <div class="blog-date">
+                            <span class="blog-day">۱۴</span>
+                            <span class="blog-month">بهمن</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> توسط ادمین</span>
+                            <span><i class="far fa-comments"></i> ۵ نظر</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">برای بالا بردن ماندگاری ادکلن چه کنیم؟</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                           در این مقاله راهکار هایی برای افزایش ماندگاری عطر و ادکلن ...
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            <span>ادامه مطلب</span>
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="btn-outline-gold px-8 py-3 rounded-md inline-block">
+                    مشاهده همه مقالات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-black bg-opacity-90 text-white relative">
+        <div class="absolute inset-0 z-0">
+            <img src="asset/img/img-cat6.jpg" alt="پس زمینه" class="w-full h-full object-cover opacity-20">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">عضویت در خبرنامه</h2>
+                <p class="text-lg opacity-80 mb-8">
+                    با عضویت در خبرنامه ما از آخرین محصولات، تخفیف‌ها و اخبار دنیای عطر مطلع شوید.
+                </p>
+                <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="ایمیل خود را وارد کنید..." class="flex-grow px-4 py-3 rounded-md focus:outline-none text-gray-800">
+                    <button type="submit" class="btn-gold px-6 py-3 rounded-md whitespace-nowrap">
+                        عضویت در خبرنامه
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="section-header text-center mb-12">
+                <h2 class="section-title">ما را در اینستاگرام دنبال کنید</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">@luxperfume</p>
+            </div>
+            
+            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-cat2.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-slider1.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-slider3.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-slider6.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-cat2.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="asset/img/img-slider5.jpg" alt="اینستاگرام">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Footer About -->
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">درباره ما</h3>
+                    <div class="footer-widget-content">
+                        <div class="footer-logo mb-4">
+                            <!-- <img src="https://via.placeholder.com/180x60/333333/FFFFFF?text=LUX+PERFUME" alt="لوکس پرفیوم"> -->
+                        </div>
+                        <p class="footer-about-text">
+                            فروشگاه لوکس پرفیوم، ارائه دهنده انواع عطر و ادکلن‌های اورجینال از برندهای معتبر جهانی با تضمین اصالت کالا و قیمت مناسب.
+                        </p>
+                        <div class="footer-social mt-4">
+                            <a href="#" class="footer-social-item">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer-social-item">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            <a href="#" class="footer-social-item">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="footer-social-item">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer Links 1 -->
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">دسترسی سریع</h3>
+                    <div class="footer-widget-content">
+                        <ul class="footer-links">
+                            <li><a href="#">صفحه اصلی</a></li>
+                            <li><a href="#">محصولات</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                            <li><a href="#">وبلاگ</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                            <li><a href="#">قوانین و مقررات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Footer Links 2 -->
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">دسته‌بندی محصولات</h3>
+                    <div class="footer-widget-content">
+                        <ul class="footer-links">
+                            <li><a href="#">عطر زنانه</a></li>
+                            <li><a href="#">عطر مردانه</a></li>
+                            <li><a href="#">عطر یونیسکس</a></li>
+                            <li><a href="#">ست هدیه</a></li>
+                            <li><a href="#">عطر جیبی</a></li>
+                            <li><a href="#">لوازم جانبی</a></li>
+                            <li><a href="#">برندها</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Footer Contact -->
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">اطلاعات تماس</h3>
+                    <div class="footer-widget-content">
+                        <ul class="footer-contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>تهران، خیابان ولیعصر، مرکز خرید پردیس، طبقه ۲، واحد ۱۲۵</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>۰۲۱-۸۸۷۷۶۶۵۵</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>۰۹۱۲۳۴۵۶۷۸۹</span>
+                            </li>
+                            <li>
+                                <i class="far fa-envelope"></i>
+                                <span>info@luxperfume.com</span>
+                            </li>
+                            <li>
+                                <i class="far fa-clock"></i>
+                                <span>شنبه تا پنجشنبه: ۱۰ الی ۲۱</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom mt-12 pt-6 border-t border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="footer-copyright text-center md:text-right">
+                        <p>© ۱۴۰۲ فروشگاه لوکس پرفیوم. تمامی حقوق محفوظ است.</p>
+                    </div>
+                    <div class="footer-payment text-center md:text-left">
+                        <img src="https://via.placeholder.com/300x35/333333/FFFFFF?text=PAYMENT+METHODS" alt="روش‌های پرداخت">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="mobile-menu-logo">
+                <!-- <img src="https://via.placeholder.com/150x50/333333/FFFFFF?text=LUX+PERFUME" alt="لوکس پرفیوم"> -->
+            </div>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="mobile-nav">
+                <li class="mobile-nav-item active">
+                    <a href="#" class="mobile-nav-link">صفحه اصلی</a>
+                </li>
+                <li class="mobile-nav-item has-dropdown">
+                    <a href="#" class="mobile-nav-link">
+                        محصولات
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="#">عطر زنانه</a></li>
+                        <li><a href="#">عطر مردانه</a></li>
+                        <li><a href="#">عطر یونیسکس</a></li>
+                        <li><a href="#">ست هدیه</a></li>
+                        <li><a href="#">عطر جیبی</a></li>
+                        <li><a href="#">لوازم جانبی</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-nav-item has-dropdown">
+                    <a href="#" class="mobile-nav-link">
+                        برندها
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="#">شنل</a></li>
+                        <li><a href="#">دیور</a></li>
+                        <li><a href="#">ورساچه</a></li>
+                        <li><a href="#">گوچی</a></li>
+                        <li><a href="#">تام فورد</a></li>
+                        <li><a href="#">کرید</a></li>
+                        <li><a href="#">جو مالون</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">تخفیف‌ها</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">وبلاگ</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">درباره ما</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-contact">
+                <div class="mobile-menu-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>۰۲۱-۸۸۷۷۶۶۵۵</span>
+                </div>
+                <div class="mobile-menu-contact-item">
+                    <i class="far fa-envelope"></i>
+                    <span>info@luxperfume.com</span>
+                </div>
+            </div>
+            <div class="mobile-menu-social">
+                <a href="#" class="mobile-menu-social-item">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="mobile-menu-social-item">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="#" class="mobile-menu-social-item">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="mobile-menu-social-item">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="search-popup-container">
+            <form class="search-form">
+                <input type="text" placeholder="جستجوی محصولات..." class="search-input">
+                <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="search-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal">
+        <div class="quick-view-container">
+            <div class="quick-view-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="quick-view-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="quick-view-image">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="عطر شنل">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="quick-view-details">
+                            <h2 class="quick-view-title">شنل کوکو مادمازل پرفیوم</h2>
+                            <div class="quick-view-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(۴۸ نظر)</span>
+                            </div>
+                            <div class="quick-view-price">
+                                <span class="price">۴,۸۵۰,۰۰۰ تومان</span>
+                            </div>
+                            <div class="quick-view-desc">
+                                <p>
+                                    عطر شنل کوکو مادمازل با رایحه‌ای گرم و شیرین، ترکیبی از نت‌های مرکبات، گل رز، یاس، وانیل و نعناع هندی است که برای بانوان شیک‌پوش و مدرن طراحی شده است.
+                                </p>
+                            </div>
+                            <div class="quick-view-size">
+                                <h4>حجم:</h4>
+                                <div class="size-options">
+				                                <div class="size-options">
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="50ml">
+                                        <span>۵۰ میلی‌لیتر</span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="100ml" checked>
+                                        <span>۱۰۰ میلی‌لیتر</span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="size" value="200ml">
+                                        <span>۲۰۰ میلی‌لیتر</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="quick-view-quantity">
+                                <h4>تعداد:</h4>
+                                <div class="quantity-input">
+                                    <button class="quantity-down">-</button>
+                                    <input type="text" value="1" min="1">
+                                    <button class="quantity-up">+</button>
+                                </div>
+                            </div>
+                            <div class="quick-view-actions">
+                                <button class="btn-gold">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    افزودن به سبد خرید
+                                </button>
+                                <button class="btn-outline-gold">
+                                    <i class="far fa-heart"></i>
+                                    افزودن به علاقه‌مندی‌ها
+                                </button>
+                            </div>
+                            <div class="quick-view-meta">
+                                <div class="meta-item">
+                                    <span>شناسه محصول:</span>
+                                    <span>CH-1234</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span>دسته‌بندی:</span>
+                                    <a href="#">عطر زنانه</a>
+                                </div>
+                                <div class="meta-item">
+                                    <span>برند:</span>
+                                    <a href="#">شنل</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="asset/js/main.js"></script>
+</body>
+</html>

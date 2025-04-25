@@ -1,0 +1,1267 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عطر زنانه شنل چنس | Luxury Scent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <!-- Top Bar -->
+        <div class="border-b border-gray-200">
+            <div class="container mx-auto px-4 py-2">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <a href="tel:02188776655" class="text-sm text-gray-600 hover:text-gold transition-colors">
+                            <i class="fas fa-phone ml-1"></i>
+                            ۰۲۱-۸۸۷۷۶۶۵۵
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="mailto:info@luxuryscent.ir" class="text-sm text-gray-600 hover:text-gold transition-colors">
+                            <i class="fas fa-envelope ml-1"></i>
+                            info@luxuryscent.ir
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <a href="#" class="text-sm text-gray-600 hover:text-gold transition-colors">پیگیری سفارش</a>
+                        <span class="text-gray-300">|</span>
+                        <a href="#" class="text-sm text-gray-600 hover:text-gold transition-colors">درباره ما</a>
+                        <span class="text-gray-300">|</span>
+                        <a href="#" class="text-sm text-gray-600 hover:text-gold transition-colors">تماس با ما</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-gray-900">
+                    <span class="text-gold">Luxury</span> Scent
+                </a>
+                
+                <!-- Search Bar - Desktop -->
+                <div class="hidden md:flex flex-grow max-w-xl mx-8">
+                    <div class="relative w-full">
+                        <input type="text" placeholder="جستجوی عطر، برند یا رایحه..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                        <button class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Menu -->
+                <div class="flex items-center space-x-6 space-x-reverse">
+                    <!-- Search Button - Mobile -->
+                    <button id="searchBtn" class="md:hidden text-gray-700 hover:text-gold transition-colors">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    
+                    <!-- User Account -->
+                    <a href="#" class="text-gray-700 hover:text-gold transition-colors">
+                        <i class="far fa-user text-xl"></i>
+                    </a>
+                    
+                    <!-- Wishlist -->
+                    <a href="#" class="text-gray-700 hover:text-gold transition-colors relative">
+                        <i class="far fa-heart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-gold text-gray-900 text-xs w-5 h-5 rounded-full flex items-center justify-center">۳</span>
+                    </a>
+                    
+                    <!-- Shopping Cart -->
+                    <a href="#" class="text-gray-700 hover:text-gold transition-colors relative">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-gold text-gray-900 text-xs w-5 h-5 rounded-full flex items-center justify-center">۲</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden text-gray-700 hover:text-gold transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Bar - Mobile -->
+            <div id="searchBar" class="mt-4 md:hidden hidden">
+                <input type="text" placeholder="جستجوی عطر، برند یا رایحه..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="bg-gray-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="hidden lg:flex justify-between">
+                    <ul class="flex space-x-8 space-x-reverse">
+                        <li>
+                            <a href="index.html" class="block py-4 hover:text-gold transition-colors">خانه</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="products.html" class="block py-4 text-gold transition-colors">محصولات</a>
+                            <div class="absolute right-0 top-full bg-white text-gray-900 shadow-lg rounded-b-lg p-4 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <ul class="space-y-2">
+                                    <li><a href="products.html?category=women" class="block hover:text-gold transition-colors">عطر زنانه</a></li>
+                                    <li><a href="products.html?category=men" class="block hover:text-gold transition-colors">عطر مردانه</a></li>
+                                    <li><a href="products.html?category=unisex" class="block hover:text-gold transition-colors">عطر یونیسکس</a></li>
+                                    <li><a href="products.html?category=gift" class="block hover:text-gold transition-colors">ست هدیه</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="relative group">
+                            <a href="#" class="block py-4 hover:text-gold transition-colors">برندها</a>
+                            <div class="absolute right-0 top-full bg-white text-gray-900 shadow-lg rounded-b-lg p-4 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block hover:text-gold transition-colors">شنل (Chanel)</a></li>
+                                    <li><a href="#" class="block hover:text-gold transition-colors">دیور (Dior)</a></li>
+                                    <li><a href="#" class="block hover:text-gold transition-colors">تام فورد (Tom Ford)</a></li>
+                                    <li><a href="#" class="block hover:text-gold transition-colors">گوچی (Gucci)</a></li>
+                                    <li><a href="#" class="block hover:text-gold transition-colors">ورساچه (Versace)</a></li>
+                                    <li><a href="#" class="block hover:text-gold transition-colors">همه برندها</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-4 hover:text-gold transition-colors">تخفیف‌ها و پیشنهادها</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-4 hover:text-gold transition-colors">مقالات</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center">
+                        <a href="#" class="py-4 hover:text-gold transition-colors">
+                            <i class="fas fa-percent ml-1"></i>
+                            کد تخفیف
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="lg:hidden py-4 hidden">
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="index.html" class="block hover:text-gold transition-colors">خانه</a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="block text-gold transition-colors">محصولات</a>
+                            <ul class="pr-4 mt-2 space-y-2">
+                                <li><a href="products.html?category=women" class="block text-gray-400 hover:text-gold transition-colors">عطر زنانه</a></li>
+                                <li><a href="products.html?category=men" class="block text-gray-400 hover:text-gold transition-colors">عطر مردانه</a></li>
+                                <li><a href="products.html?category=unisex" class="block text-gray-400 hover:text-gold transition-colors">عطر یونیسکس</a></li>
+                                <li><a href="products.html?category=gift" class="block text-gray-400 hover:text-gold transition-colors">ست هدیه</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-gold transition-colors">برندها</a>
+                            <ul class="pr-4 mt-2 space-y-2">
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">شنل (Chanel)</a></li>
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">دیور (Dior)</a></li>
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">تام فورد (Tom Ford)</a></li>
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">گوچی (Gucci)</a></li>
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">ورساچه (Versace)</a></li>
+                                <li><a href="#" class="block text-gray-400 hover:text-gold transition-colors">همه برندها</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-gold transition-colors">تخفیف‌ها و پیشنهادها</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-gold transition-colors">مقالات</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block hover:text-gold transition-colors">
+                                <i class="fas fa-percent ml-1"></i>
+                                کد تخفیف
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="text-sm">
+            <ol class="flex items-center space-x-2 space-x-reverse">
+                <li>
+                    <a href="index.html" class="text-gray-500 hover:text-gold">خانه</a>
+                </li>
+                <li class="flex items-center">
+                    <span class="mx-2 text-gray-400">/</span>
+                    <a href="products.html" class="text-gray-500 hover:text-gold">محصولات</a>
+                </li>
+                <li class="flex items-center">
+                    <span class="mx-2 text-gray-400">/</span>
+                    <a href="products.html?category=women" class="text-gray-500 hover:text-gold">عطر زنانه</a>
+                </li>
+                <li class="flex items-center">
+                    <span class="mx-2 text-gray-400">/</span>
+                    <span class="text-gray-900">عطر زنانه شنل چنس</span>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image mb-4">
+                            <img id="mainImage" src="https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423336.jpg" alt="عطر زنانه شنل چنس" class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="image-thumbnails flex space-x-2 space-x-reverse">
+                            <div class="thumbnail-item w-20 h-20 rounded-lg overflow-hidden cursor-pointer border-2 border-gold">
+                                                                <img src="https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423336.jpg" alt="عطر زنانه شنل چنس" class="w-full h-full object-cover">
+                            </div>
+                            <div class="thumbnail-item w-20 h-20 rounded-lg overflow-hidden cursor-pointer">
+                                <img src="https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423337.jpg" alt="عطر زنانه شنل چنس" class="w-full h-full object-cover">
+                            </div>
+                            <div class="thumbnail-item w-20 h-20 rounded-lg overflow-hidden cursor-pointer">
+                                <img src="https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423338.jpg" alt="عطر زنانه شنل چنس" class="w-full h-full object-cover">
+                            </div>
+                            <div class="thumbnail-item w-20 h-20 rounded-lg overflow-hidden cursor-pointer">
+                                <img src="https://dkstatics-public.digikala.com/digikala-products/ec9a962187e1f82cc47e7a148ef99ec1c6fd024d_1656423339.jpg" alt="عطر زنانه شنل چنس" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="product-actions mt-6 flex space-x-4 space-x-reverse">
+                            <button class="flex items-center text-gray-600 hover:text-gold">
+                                <i class="far fa-heart ml-1"></i>
+                                <span>افزودن به علاقه‌مندی‌ها</span>
+                            </button>
+                            <button class="flex items-center text-gray-600 hover:text-gold">
+                                <i class="fas fa-share-alt ml-1"></i>
+                                <span>اشتراک‌گذاری</span>
+                            </button>
+                            <button class="flex items-center text-gray-600 hover:text-gold">
+                                <i class="fas fa-chart-line ml-1"></i>
+                                <span>مقایسه</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <div class="product-info">
+                        <div class="mb-4">
+                            <h1 class="text-2xl font-bold mb-2">عطر زنانه شنل چنس</h1>
+                            <p class="text-gray-500">Chanel Chance Eau de Parfum</p>
+                        </div>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 mr-2">(۴.۵ - ۱۲۵ نظر)</span>
+                            <a href="#reviews" class="text-gold mr-4 hover:underline">مشاهده نظرات</a>
+                        </div>
+                        
+                        <div class="product-attributes mb-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">برند:</span>
+                                    <a href="#" class="text-gold hover:underline">شنل (Chanel)</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">کشور سازنده:</span>
+                                    <span>فرانسه</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">جنسیت:</span>
+                                    <span>زنانه</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">نوع رایحه:</span>
+                                    <span>گلدار، میوه‌ای</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">غلظت:</span>
+                                    <span>Eau de Parfum</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-gray-600 ml-2">ماندگاری:</span>
+                                    <span>۶-۸ ساعت</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-description mb-6">
+                            <h3 class="text-lg font-medium mb-2">توضیحات محصول</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                عطر زنانه شنل چنس با رایحه‌ای گلدار و میوه‌ای، انتخابی ایده‌آل برای استفاده روزانه است. این عطر با ماندگاری بالا و پخش بوی مناسب، حس تازگی و شادابی را به شما هدیه می‌دهد. چنس در سال ۲۰۰۳ توسط ژاک پولژ طراحی شد و از آن زمان به یکی از محبوب‌ترین عطرهای زنانه تبدیل شده است.
+                            </p>
+                            <div class="mt-4">
+                                <button id="showMoreBtn" class="text-gold hover:underline">مشاهده توضیحات بیشتر</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-notes mb-6">
+                            <h3 class="text-lg font-medium mb-2">نت‌های رایحه</h3>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto bg-yellow-100 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fas fa-lemon text-yellow-500 text-xl"></i>
+                                    </div>
+                                    <p class="text-sm font-medium">نت اولیه</p>
+                                    <p class="text-xs text-gray-500">مرکبات، فلفل صورتی</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto bg-pink-100 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fas fa-spa text-pink-500 text-xl"></i>
+                                    </div>
+                                    <p class="text-sm font-medium">نت میانی</p>
+                                    <p class="text-xs text-gray-500">یاس، رز، مگنولیا</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fas fa-tree text-amber-700 text-xl"></i>
+                                    </div>
+                                    <p class="text-sm font-medium">نت پایه</p>
+                                    <p class="text-xs text-gray-500">مشک، پاچولی، وانیل</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Purchase Box -->
+                    <div class="purchase-box bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <div class="mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-600">قیمت:</span>
+                                <div>
+                                    <span class="text-2xl font-bold">۲,۸۵۰,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-green-600 text-sm">
+                                <i class="fas fa-check-circle ml-1"></i>
+                                <span>موجود در انبار</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">انتخاب حجم:</h4>
+                            <div class="flex space-x-3 space-x-reverse">
+                                <button class="volume-option border border-gray-300 px-4 py-2 rounded-lg hover:border-gold">
+                                    ۳۰ میلی‌لیتر
+                                </button>
+                                <button class="volume-option border border-gray-300 px-4 py-2 rounded-lg hover:border-gold active">
+                                    ۵۰ میلی‌لیتر
+                                </button>
+                                <button class="volume-option border border-gray-300 px-4 py-2 rounded-lg hover:border-gold">
+                                    ۱۰۰ میلی‌لیتر
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3">تعداد:</h4>
+                            <div class="flex items-center">
+                                <div class="quantity-selector flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                                    <button class="quantity-btn px-3 py-2 bg-gray-100 hover:bg-gray-200">-</button>
+                                    <input type="number" value="1" min="1" class="w-16 text-center border-0 focus:outline-none">
+                                    <button class="quantity-btn px-3 py-2 bg-gray-100 hover:bg-gray-200">+</button>
+                                </div>
+                                <span class="text-gray-500 text-sm mr-3">حداکثر سفارش: ۵ عدد</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <button class="add-to-cart-btn bg-gold hover:bg-gold-dark text-gray-900 w-full py-3 rounded-lg transition-colors font-medium">
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                        
+                        <div class="shipping-info">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-truck text-gray-600 ml-3"></i>
+                                <div>
+                                    <p class="font-medium">ارسال سریع</p>
+                                    <p class="text-sm text-gray-500">تحویل بین ۱ تا ۳ روز کاری</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-shield-alt text-gray-600 ml-3"></i>
+                                <div>
+                                    <p class="font-medium">ضمانت اصالت کالا</p>
+                                    <p class="text-sm text-gray-500">تضمین اصالت و کیفیت محصول</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-undo text-gray-600 ml-3"></i>
+                                <div>
+                                    <p class="font-medium">۷ روز ضمانت بازگشت</p>
+                                    <p class="text-sm text-gray-500">در صورت عدم رضایت از محصول</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Tabs -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="border-b border-gray-200">
+                    <div class="flex overflow-x-auto">
+                        <button class="tab-btn active px-6 py-4 font-medium text-gold border-b-2 border-gold whitespace-nowrap">
+                            مشخصات محصول
+                        </button>
+                        <button class="tab-btn px-6 py-4 font-medium text-gray-600 hover:text-gold whitespace-nowrap">
+                            توضیحات تکمیلی
+                        </button>
+                        <button class="tab-btn px-6 py-4 font-medium text-gray-600 hover:text-gold whitespace-nowrap" id="reviews">
+                            نظرات کاربران (۱۲۵)
+                        </button>
+                        <button class="tab-btn px-6 py-4 font-medium text-gray-600 hover:text-gold whitespace-nowrap">
+                            راهنمای انتخاب عطر
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Tab Content - Specifications -->
+                    <div class="tab-content active">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-lg font-medium mb-4">مشخصات کلی</h3>
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600 w-1/3">نام محصول</td>
+                                                                                        <td class="py-3">عطر زنانه شنل چنس</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">نام لاتین</td>
+                                            <td class="py-3">Chanel Chance Eau de Parfum</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">برند</td>
+                                            <td class="py-3">شنل (Chanel)</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">سال معرفی</td>
+                                            <td class="py-3">۲۰۰۳</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">کشور سازنده</td>
+                                            <td class="py-3">فرانسه</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">طراح</td>
+                                            <td class="py-3">ژاک پولژ (Jacques Polge)</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">جنسیت</td>
+                                            <td class="py-3">زنانه</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-gray-600">مناسب برای</td>
+                                            <td class="py-3">استفاده روزانه، مهمانی‌های رسمی</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-medium mb-4">مشخصات رایحه</h3>
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600 w-1/3">نوع رایحه</td>
+                                            <td class="py-3">گلدار، میوه‌ای</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">غلظت</td>
+                                            <td class="py-3">Eau de Parfum</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">نت اولیه</td>
+                                            <td class="py-3">مرکبات، فلفل صورتی، آناناس</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">نت میانی</td>
+                                            <td class="py-3">یاس، رز، مگنولیا، زنبق</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">نت پایه</td>
+                                            <td class="py-3">مشک، پاچولی، وانیل، عنبر</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">ماندگاری</td>
+                                            <td class="py-3">۶ تا ۸ ساعت</td>
+                                        </tr>
+                                        <tr class="border-b border-gray-200">
+                                            <td class="py-3 text-gray-600">پخش بو</td>
+                                            <td class="py-3">متوسط رو به بالا</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 text-gray-600">فصل پیشنهادی</td>
+                                            <td class="py-3">بهار و تابستان</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Content - Description -->
+                    <div class="tab-content hidden">
+                        <div class="prose max-w-none">
+                            <h3>درباره عطر شنل چنس</h3>
+                            <p>
+                                عطر شنل چنس (Chanel Chance) یکی از محبوب‌ترین و پرفروش‌ترین عطرهای زنانه برند شنل است که در سال ۲۰۰۳ توسط ژاک پولژ، عطرساز مشهور این برند طراحی شد. نام این عطر به معنای "شانس" است و فلسفه آن بر این اساس است که شانس همیشه در زندگی ما حضور دارد و باید آماده استقبال از آن باشیم.
+                            </p>
+                            <p>
+                                شیشه این عطر به شکل دایره طراحی شده که نمادی از چرخش شانس و اقبال در زندگی است. این طراحی منحصر به فرد، یکی از ویژگی‌های متمایز این عطر محسوب می‌شود.
+                            </p>
+                            <h4>رایحه و ترکیبات</h4>
+                            <p>
+                                شنل چنس با ترکیبی از رایحه‌های گلدار و میوه‌ای، عطری شاداب و پر انرژی است. در نت اولیه، رایحه‌های مرکبات، فلفل صورتی و آناناس حس تازگی و طراوت را به شما منتقل می‌کنند. در نت میانی، گل‌های یاس، رز، مگنولیا و زنبق حضور دارند که شخصیت گلدار و زنانه عطر را شکل می‌دهند. در نت پایه نیز ترکیبی از مشک، پاچولی، وانیل و عنبر، عمق و گرمای خاصی به این عطر می‌بخشند.
+                            </p>
+                            <h4>ماندگاری و پخش بو</h4>
+                            <p>
+                                شنل چنس با غلظت Eau de Parfum، ماندگاری بسیار خوبی دارد و بین ۶ تا ۸ ساعت روی پوست باقی می‌ماند. پخش بوی این عطر متوسط رو به بالاست و تا شعاع مناسبی اطراف شما را احاطه می‌کند، بدون آنکه آزاردهنده باشد.
+                            </p>
+                            <h4>مناسب برای چه زمان‌هایی؟</h4>
+                            <p>
+                                این عطر به دلیل رایحه متعادل و دلنشین، برای استفاده روزانه در محیط کار، دانشگاه و قرارهای روزانه بسیار مناسب است. همچنین می‌توانید از آن در مهمانی‌های نیمه رسمی نیز استفاده کنید. بهترین فصل برای استفاده از شنل چنس، بهار و تابستان است، اما به دلیل تعادل در رایحه، در پاییز ملایم نیز می‌توانید از آن بهره ببرید.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Content - Reviews -->
+                    <div class="tab-content hidden">
+                        <div class="mb-8">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-medium">نظرات کاربران (۱۲۵)</h3>
+                                <button class="bg-gold hover:bg-gold-dark text-gray-900 px-4 py-2 rounded-lg transition-colors">
+                                    ثبت نظر جدید
+                                </button>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                                <div class="col-span-1 bg-gray-50 p-4 rounded-lg text-center">
+                                    <div class="text-3xl font-bold text-gold mb-2">۴.۵</div>
+                                    <div class="flex justify-center text-gold mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-sm text-gray-600">از مجموع ۱۲۵ نظر</p>
+                                </div>
+                                
+                                <div class="col-span-3">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <div class="flex items-center mb-2">
+                                                <span class="text-sm text-gray-600 ml-2">ماندگاری:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 85%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۴.۳</span>
+                                            </div>
+                                            <div class="flex items-center mb-2">
+                                                <span class="text-sm text-gray-600 ml-2">پخش بو:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 80%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۴.۰</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="text-sm text-gray-600 ml-2">ارزش خرید:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 90%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۴.۵</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center mb-2">
+                                                <span class="text-sm text-gray-600 ml-2">کیفیت بسته‌بندی:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 95%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۴.۸</span>
+                                            </div>
+                                            <div class="flex items-center mb-2">
+                                                <span class="text-sm text-gray-600 ml-2">رایحه:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 90%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۴.۵</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="text-sm text-gray-600 ml-2">اصالت کالا:</span>
+                                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                                    <div class="bg-gold h-2 rounded-full" style="width: 100%"></div>
+                                                </div>
+                                                <span class="text-sm font-medium mr-2">۵.۰</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reviews List -->
+                            <div class="space-y-6">
+                                <!-- Review Item -->
+                                <div class="border-b border-gray-200 pb-6">
+                                    <div class="flex justify-between mb-2">
+                                        <div class="flex items-center">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="mr-3">
+                                                <h4 class="font-medium">مریم احمدی</h4>
+                                                <p class="text-sm text-gray-500">۱۵ مهر ۱۴۰۲</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex text-gold">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                                                                <h5 class="font-medium mb-2">عطری فوق‌العاده برای استفاده روزانه</h5>
+                                        <p class="text-gray-600">
+                                            من این عطر رو حدود یک ماهه که خریدم و واقعاً از انتخابم راضی هستم. رایحه‌اش خیلی دلنشین و شیک هست و ماندگاری خوبی هم داره. برای محیط کار عالیه چون نه خیلی تنده و نه خیلی ملایم. بسته‌بندی و شیشه عطر هم بسیار زیباست. قطعاً دوباره خرید می‌کنم.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <span class="text-green-600 ml-2">
+                                            <i class="fas fa-check-circle ml-1"></i>
+                                            خریدار این محصول
+                                        </span>
+                                        <button class="text-gray-500 hover:text-gold mr-4">
+                                            <i class="far fa-thumbs-up ml-1"></i>
+                                            ۱۲
+                                        </button>
+                                        <button class="text-gray-500 hover:text-gold mr-2">
+                                            <i class="far fa-thumbs-down ml-1"></i>
+                                            ۲
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Review Item -->
+                                <div class="border-b border-gray-200 pb-6">
+                                    <div class="flex justify-between mb-2">
+                                        <div class="flex items-center">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="mr-3">
+                                                <h4 class="font-medium">علی محمدی</h4>
+                                                <p class="text-sm text-gray-500">۲ مهر ۱۴۰۲</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex text-gold">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5 class="font-medium mb-2">هدیه‌ای عالی</h5>
+                                        <p class="text-gray-600">
+                                            این عطر رو برای تولد همسرم خریدم و خیلی خوشش اومد. بوی خیلی خوبی داره و ماندگاریش هم خوبه. فقط قیمتش یکم بالاست ولی با توجه به کیفیت و برند معتبرش، ارزش خرید داره. بسته‌بندی شیک و اصل بودن کالا هم از نکات مثبتش بود.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <span class="text-green-600 ml-2">
+                                            <i class="fas fa-check-circle ml-1"></i>
+                                            خریدار این محصول
+                                        </span>
+                                        <button class="text-gray-500 hover:text-gold mr-4">
+                                            <i class="far fa-thumbs-up ml-1"></i>
+                                            ۸
+                                        </button>
+                                        <button class="text-gray-500 hover:text-gold mr-2">
+                                            <i class="far fa-thumbs-down ml-1"></i>
+                                            ۱
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Review Item -->
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <div class="flex items-center">
+                                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <div class="mr-3">
+                                                <h4 class="font-medium">سارا رضایی</h4>
+                                                <p class="text-sm text-gray-500">۲۵ شهریور ۱۴۰۲</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex text-gold">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5 class="font-medium mb-2">رایحه خوب اما ماندگاری متوسط</h5>
+                                        <p class="text-gray-600">
+                                            رایحه این عطر واقعاً دوست‌داشتنی و شیکه، اما ماندگاریش روی پوست من حدود ۴-۵ ساعت بود که نسبت به قیمتش انتظار بیشتری داشتم. البته روی لباس بیشتر میمونه. در کل از خریدم راضی هستم ولی کاش ماندگاری بهتری داشت.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center text-sm">
+                                        <span class="text-green-600 ml-2">
+                                            <i class="fas fa-check-circle ml-1"></i>
+                                            خریدار این محصول
+                                        </span>
+                                        <button class="text-gray-500 hover:text-gold mr-4">
+                                            <i class="far fa-thumbs-up ml-1"></i>
+                                            ۵
+                                        </button>
+                                        <button class="text-gray-500 hover:text-gold mr-2">
+                                            <i class="far fa-thumbs-down ml-1"></i>
+                                            ۰
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <div class="flex justify-center mt-8">
+                                <nav class="flex items-center">
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 text-gray-600 hover:bg-gray-100">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 bg-gold text-gray-900">۱</a>
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 text-gray-600 hover:bg-gray-100">۲</a>
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 text-gray-600 hover:bg-gray-100">۳</a>
+                                    <span class="px-3 py-1 mx-1 text-gray-600">...</span>
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 text-gray-600 hover:bg-gray-100">۱۰</a>
+                                    <a href="#" class="px-3 py-1 rounded-md mx-1 border border-gray-300 text-gray-600 hover:bg-gray-100">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Content - Guide -->
+                    <div class="tab-content hidden">
+                        <div class="prose max-w-none">
+                            <h3>راهنمای انتخاب عطر مناسب</h3>
+                            <p>
+                                انتخاب عطر مناسب یکی از مهم‌ترین تصمیماتی است که می‌تواند در ظاهر و اعتماد به نفس شما تأثیر بگذارد. در این راهنما، نکات مهمی را برای انتخاب عطر متناسب با سلیقه و شخصیت خود خواهید آموخت.
+                            </p>
+                            
+                            <h4>۱. آشنایی با انواع غلظت عطر</h4>
+                            <ul>
+                                <li><strong>Parfum (عطر خالص):</strong> غلیظ‌ترین نوع با ۲۰-۳۰٪ اسانس و ماندگاری ۶-۸ ساعت</li>
+                                <li><strong>Eau de Parfum (ادو پرفیوم):</strong> با ۱۵-۲۰٪ اسانس و ماندگاری ۵-۷ ساعت</li>
+                                <li><strong>Eau de Toilette (ادو تویلت):</strong> با ۵-۱۵٪ اسانس و ماندگاری ۳-۵ ساعت</li>
+                                <li><strong>Eau de Cologne (ادو کلن):</strong> با ۲-۴٪ اسانس و ماندگاری ۲-۳ ساعت</li>
+                            </ul>
+                            
+                            <h4>۲. شناخت گروه‌های بویایی</h4>
+                            <ul>
+                                <li><strong>گلدار (Floral):</strong> رایحه‌های گل مانند رز، یاس و مگنولیا</li>
+                                <li><strong>شرقی (Oriental):</strong> رایحه‌های گرم و شیرین مانند وانیل، عنبر و ادویه‌جات</li>
+                                <li><strong>چوبی (Woody):</strong> رایحه‌های چوب صندل، سدر و پاچولی</li>
+                                <li><strong>مرکباتی (Citrus):</strong> رایحه‌های تازه و انرژی‌بخش مانند لیمو، پرتقال و گریپ‌فروت</li>
+                                <li><strong>سبز (Green):</strong> رایحه‌های تازه و طبیعی مانند چمن تازه و برگ‌های سبز</li>
+                            </ul>
+                            
+                            <h4>۳. نکات مهم هنگام خرید عطر</h4>
+                            <ul>
+                                <li>عطر را مستقیماً روی پوست خود تست کنید، نه روی کاغذ تستر</li>
+                                <li>بعد از اسپری کردن عطر، حداقل ۱۵ دقیقه صبر کنید تا نت میانی آن ظاهر شود</li>
+                                <li>در هر بار تست، بیش از ۳ عطر مختلف را امتحان نکنید</li>
+                                <li>به فصل استفاده توجه کنید؛ عطرهای سبک‌تر برای تابستان و عطرهای گرم‌تر برای زمستان مناسب‌ترند</li>
+                                <li>به مناسبت استفاده فکر کنید؛ برای محیط کار عطرهای ملایم‌تر و برای مهمانی‌ها عطرهای شاخص‌تر مناسب هستند</li>
+                            </ul>
+                            
+                            <h4>۴. نگهداری صحیح عطر</h4>
+                            <ul>
+                                <li>عطر را در جای خنک و دور از نور مستقیم خورشید نگهداری کنید</li>
+                                <li>درب شیشه را همیشه محکم ببندید تا از تبخیر اسانس جلوگیری شود</li>
+                                <li>عطر را در محیط مرطوب مانند حمام نگهداری نکنید</li>
+                                <li>از تکان دادن شدید شیشه عطر خودداری کنید</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">محصولات مرتبط</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/111966381.jpg" alt="عطر زنانه دیور جادور" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-xs text-white px-2 py-1 rounded">۱۵٪ تخفیف</div>
+                                               <button class="absolute bottom-4 left-4 bg-white p-2 rounded-full shadow hover:bg-gold transition-colors">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <a href="#" class="text-xs text-gold hover:underline">دیور (Dior)</a>
+                        <h3 class="font-medium mb-2 text-gray-900">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه دیور جادور</a>
+                        </h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-gold text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 mr-1">(۸۷)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">۳,۲۵۰,۰۰۰</span>
+                                <div class="font-bold text-gray-900">۲,۷۶۰,۰۰۰ تومان</div>
+                            </div>
+                            <button class="bg-gray-200 p-2 rounded-full hover:bg-gold transition-colors">
+                                <i class="fas fa-shopping-bag text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/121415904.jpg" alt="عطر زنانه شنل کوکو مادمازل" class="w-full h-64 object-cover">
+                        <button class="absolute bottom-4 left-4 bg-white p-2 rounded-full shadow hover:bg-gold transition-colors">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <a href="#" class="text-xs text-gold hover:underline">شنل (Chanel)</a>
+                        <h3 class="font-medium mb-2 text-gray-900">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه شنل کوکو مادمازل</a>
+                        </h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-gold text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 mr-1">(۱۱۲)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-gray-900">۳,۱۵۰,۰۰۰ تومان</div>
+                            </div>
+                            <button class="bg-gray-200 p-2 rounded-full hover:bg-gold transition-colors">
+                                <i class="fas fa-shopping-bag text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/110534452.jpg" alt="عطر زنانه لانکوم لا ویه است بل" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-xs text-white px-2 py-1 rounded">جدید</div>
+                        <button class="absolute bottom-4 left-4 bg-white p-2 rounded-full shadow hover:bg-gold transition-colors">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <a href="#" class="text-xs text-gold hover:underline">لانکوم (Lancome)</a>
+                        <h3 class="font-medium mb-2 text-gray-900">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه لانکوم لا ویه است بل</a>
+                        </h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-gold text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 mr-1">(۶۵)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-gray-900">۲,۹۸۰,۰۰۰ تومان</div>
+                            </div>
+                            <button class="bg-gray-200 p-2 rounded-full hover:bg-gold transition-colors">
+                                <i class="fas fa-shopping-bag text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/114389459.jpg" alt="عطر زنانه مارک جاکوبز دیزی" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-xs text-white px-2 py-1 rounded">۱۰٪ تخفیف</div>
+                        <button class="absolute bottom-4 left-4 bg-white p-2 rounded-full shadow hover:bg-gold transition-colors">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <a href="#" class="text-xs text-gold hover:underline">مارک جاکوبز (Marc Jacobs)</a>
+                        <h3 class="font-medium mb-2 text-gray-900">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه مارک جاکوبز دیزی</a>
+                        </h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-gold text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 mr-1">(۷۳)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through text-sm">۲,۸۵۰,۰۰۰</span>
+                                <div class="font-bold text-gray-900">۲,۵۶۵,۰۰۰ تومان</div>
+                            </div>
+                            <button class="bg-gray-200 p-2 rounded-full hover:bg-gold transition-colors">
+                                <i class="fas fa-shopping-bag text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">محصولات بازدید شده اخیر</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/110534452.jpg" alt="عطر زنانه لانکوم لا ویه است بل" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">لانکوم</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه لانکوم لا ویه است بل</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۲,۹۸۰,۰۰۰ تومان</div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/114389459.jpg" alt="عطر زنانه مارک جاکوبز دیزی" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">مارک جاکوبز</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه مارک جاکوبز دیزی</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۲,۵۶۵,۰۰۰ تومان</div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/121415904.jpg" alt="عطر زنانه شنل کوکو مادمازل" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">شنل</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه شنل کوکو مادمازل</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۳,۱۵۰,۰۰۰ تومان</div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/111966381.jpg" alt="عطر زنانه دیور جادور" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">دیور</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر زنانه دیور جادور</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۲,۷۶۰,۰۰۰ تومان</div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/119240643.jpg" alt="عطر مردانه ورساچه اروس" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">ورساچه</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر مردانه ورساچه اروس</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۲,۴۵۰,۰۰۰ تومان</div>
+                    </div>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative">
+                        <img src="https://dkstatics-public.digikala.com/digikala-products/113846453.jpg" alt="عطر مردانه بلو د شنل" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="text-xs text-gold hover:underline">شنل</a>
+                        <h3 class="text-sm font-medium mb-2 text-gray-900 truncate">
+                            <a href="#" class="hover:text-gold transition-colors">عطر مردانه بلو د شنل</a>
+                        </h3>
+                        <div class="font-bold text-sm text-gray-900">۳,۲۵۰,۰۰۰ تومان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <div class="col-span-1 lg:col-span-2">
+                    <img src="https://via.placeholder.com/150x50/CCCCCC/666666?text=LOGO" alt="لوگو فروشگاه" class="mb-4">
+                    <p class="text-gray-400 mb-4">
+                        فروشگاه آنلاین عطر و ادکلن با بیش از ۱۰ سال سابقه درخشان در ارائه محصولات اصل و با کیفیت. ما افتخار می‌کنیم که بیش از ۵۰۰ هزار مشتری رضایتمند داریم.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="bg-gray-800 hover:bg-gold text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gold text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gold text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gold text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-4 border-r-4 border-gold pr-3">دسترسی سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">صفحه اصلی</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">محصولات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">درباره ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">تماس با ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">وبلاگ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">سوالات متداول</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-4 border-r-4 border-gold pr-3">خدمات مشتریان</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">راهنمای خرید</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">نحوه ارسال سفارشات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">پیگیری سفارش</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">شرایط بازگشت کالا</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">گارانتی اصالت</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-medium mb-4 border-r-4 border-gold pr-3">تماس با ما</h4>
+                    <ul class="space-y-3">
+                        <li class="flex">
+                            <i class="fas fa-map-marker-alt text-gold ml-2 mt-1"></i>
+                            <span class="text-gray-400">تهران، خیابان ولیعصر، بالاتر از میدان ونک، برج آسمان، طبقه ۱۰</span>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-phone-alt text-gold ml-2 mt-1"></i>
+                            <span class="text-gray-400">۰۲۱-۸۸۶۶۷۷۵۵</span>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-envelope text-gold ml-2 mt-1"></i>
+                            <span class="text-gray-400">info@perfumeshop.com</span>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-clock text-gold ml-2 mt-1"></i>
+                            <span class="text-gray-400">شنبه تا پنجشنبه ۹ الی ۱۸</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h5 class="text-lg font-medium mb-4">اعتماد به ما</h5>
+                        <div class="flex space-x-4 space-x-reverse">
+                            <a href="#" class="bg-white p-2 rounded">
+                                <img src="https://via.placeholder.com/60x60/FFFFFF/666666?text=ENAMAD" alt="نماد اعتماد الکترونیکی" class="h-14">
+                            </a>
+                            <a href="#" class="bg-white p-2 rounded">
+                                <img src="https://via.placeholder.com/60x60/FFFFFF/666666?text=SAMANDEHI" alt="نشان ساماندهی" class="h-14">
+                            </a>
+                            <a href="#" class="bg-white p-2 rounded">
+                                <img src="https://via.placeholder.com/60x60/FFFFFF/666666?text=PAYMENT" alt="درگاه پرداخت" class="h-14">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h5 class="text-lg font-medium mb-4">خبرنامه</h5>
+                        <p class="text-gray-400 mb-4">برای اطلاع از آخرین تخفیف‌ها و محصولات جدید در خبرنامه ما عضو شوید.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="ایمیل خود را وارد کنید" class="bg-gray-800 text-white px-4 py-2 rounded-r-lg w-full focus:outline-none focus:ring-2 focus:ring-gold">
+                            <button type="submit" class="bg-gold hover:bg-gold-dark text-gray-900 px-4 py-2 rounded-l-lg transition-colors">
+                                عضویت
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="text-center text-gray-500 text-sm">
+                    <p>کلیه حقوق این سایت متعلق به فروشگاه آنلاین عطر و ادکلن می‌باشد. © ۱۴۰۲</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-gold hover:bg-gold-dark text-gray-900 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Tab Switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active', 'text-gold', 'border-gold'));
+                tabBtns.forEach(b => b.classList.add('text-gray-600'));
+                tabContents.forEach(c => c.classList.add('hidden'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active', 'text-gold', 'border-gold');
+                btn.classList.remove('text-gray-600');
+                tabContents[index].classList.remove('hidden');
+            });
+        });
+        
+        // Thumbnail Image Switching
+        const mainImage = document.querySelector('.main-image img');
+        const thumbnails = document.querySelectorAll('.thumbnail-item');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const imgSrc = thumb.querySelector('img').src;
+                mainImage.src = imgSrc;
+                
+                // Add/remove active class
+                thumbnails.forEach(t => t.classList.remove('border-2', 'border-gold'));
+                thumb.classList.add('border-2', 'border-gold');
+            });
+        });
+        
+        // Quantity Selector
+        const quantityInput = document.querySelector('.quantity-selector input');
+        const quantityBtns = document.querySelectorAll('.quantity-btn');
+        
+        quantityBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const currentValue = parseInt(quantityInput.value);
+                if (btn.textContent === '+' && currentValue < 5) {
+                    quantityInput.value = currentValue + 1;
+                } else if (btn.textContent === '-' && currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+        });
+        
+        // Volume Option Selection
+        const volumeOptions = document.querySelectorAll('.volume-option');
+        
+        volumeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                volumeOptions.forEach(o => o.classList.remove('active', 'border-gold', 'bg-gold-light'));
+                option.classList.add('active', 'border-gold', 'bg-gold-light');
+            });
+        });
+        
+        // Show More Description
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                const productDescription = document.querySelector('.product-description p');
+                productDescription.classList.toggle('line-clamp-3');
+                showMoreBtn.textContent = productDescription.classList.contains('line-clamp-3') ? 
+                    'مشاهده توضیحات بیشتر' : 'بستن توضیحات';
+            });
+        }
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+

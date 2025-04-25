@@ -1,0 +1,303 @@
+/* Custom CSS for Perfume Shop */
+
+:root {
+    --color-gold: #D4AF37;
+    --color-gold-dark: #B8860B;
+    --color-gold-light: #F5EFD9;
+}
+
+/* RTL Specific Styles */
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+}
+
+/* Custom Gold Colors */
+.bg-gold {
+    background-color: var(--color-gold);
+}
+
+.bg-gold-dark {
+    background-color: var(--color-gold-dark);
+}
+
+.bg-gold-light {
+    background-color: var(--color-gold-light);
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.border-gold {
+    border-color: var(--color-gold);
+}
+
+.hover\:bg-gold:hover {
+    background-color: var(--color-gold);
+}
+
+.hover\:bg-gold-dark:hover {
+    background-color: var(--color-gold-dark);
+}
+
+.hover\:text-gold:hover {
+    color: var(--color-gold);
+}
+
+/* Product Image Zoom Effect */
+.product-image-container:hover .main-image img {
+    transform: scale(1.05);
+}
+
+.main-image img {
+    transition: transform 0.3s ease;
+}
+
+/* Custom Tab Styles */
+.tab-btn.active {
+    position: relative;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-gold);
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideUp {
+    animation: slideUp 0.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-dark);
+}
+
+/* Custom Form Elements */
+.custom-checkbox {
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--color-gold);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Custom Button Styles */
+.btn-gold {
+    background-color: var(--color-gold);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--color-gold-dark);
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--color-gold);
+    color: #333;
+}
+
+/* Product Card Hover Effects */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .quick-view-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .quick-view-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-details-container {
+        flex-direction: column;
+    }
+    
+    .product-image-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .product-info-container {
+        width: 100%;
+    }
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.success {
+    background-color: #4CAF50;
+}
+
+.toast.error {
+    background-color: #F44336;
+}
+
+.toast.info {
+    background-color: var(--color-gold);
+    color: #333;
+}
+
+/* Loader Animation */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--color-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Vazir Font (Persian Font) */
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff2') format('woff2'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Bold.eot');
+    src: url('../fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Bold.woff2') format('woff2'),
+         url('../fonts/Vazir-Bold.woff') format('woff'),
+         url('../fonts/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
